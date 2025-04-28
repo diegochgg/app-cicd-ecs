@@ -1,0 +1,6 @@
+[
+  {
+    "name": "app-cicd",
+    "imageUri": "596652342959.dkr.ecr.us-east-1.amazonaws.com/app-cicd-repo:latest"
+  }
+]
