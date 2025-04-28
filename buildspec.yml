@@ -17,7 +17,8 @@ phases:
       
       # Hacer push a ECR
       - echo Pushing the Docker image to ECR...
-      - docker push 596652342959.dkr.ecr.us-east-1.amazonaws.com/app-cicd-repo/app-cicd-repo:latest
+      - docker push 596652342959.dkr.ecr.us-east-1.amazonaws.com/app-cicd-repo:latest
+
 
 artifacts:
   files: '**/*'
