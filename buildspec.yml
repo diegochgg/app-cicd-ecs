@@ -5,19 +5,19 @@ phases:
     commands:
       # Login al ECR
       - echo Logging in to Amazon ECR...
-      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 596652342959.dkr.ecr.us-east-1.amazonaws.com
+      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 332275737178.dkr.ecr.us-east-1.amazonaws.com
       
       # Construir la imagen Docker
       - echo Building the Docker image...
-      - docker build -t app-cicd .
+      - docker build -t app-cicd-repo-dc .
       
       # Etiquetar la imagen para ECR
       - echo Tagging the image...
-      - docker tag app-cicd:latest 596652342959.dkr.ecr.us-east-1.amazonaws.com/app-cicd-repo:latest
+      - docker tag app-cicd-repo-dc:latest 332275737178.dkr.ecr.us-east-1.amazonaws.com/app-cicd-repo-dc:latest
       
       # Hacer push a ECR
       - echo Pushing the Docker image to ECR...
-      - docker push 596652342959.dkr.ecr.us-east-1.amazonaws.com/app-cicd-repo:latest
+      - docker push 332275737178.dkr.ecr.us-east-1.amazonaws.com/app-cicd-repo-dc:latest
 
 
 artifacts:
